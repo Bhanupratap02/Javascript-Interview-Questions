@@ -1,0 +1,81 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div>
+        <h1 id="time"></h1>
+        <button id="stop-timer">Stop Timer</button>
+      </div> -->
+
+      <h1 class="title">Countdown Timer</h1>
+
+      <div class="timer-labels">
+        <p class="timer-label">Hours</p>
+        <p class="timer-label">Minutes</p>
+        <p class="timer-label">Seconds</p>
+      </div>
+      <div class="timer-inputs">
+        <input
+          type="number"
+          oninput="this.value=this.value.slice(0,this.maxLength)"
+          maxlength="2"
+          name="hours"
+          id="hour"
+          class="timer-input"
+        />
+        <p class="colons">:</p>
+        <input
+          type="number"
+          oninput="this.value=this.value.slice(0,this.maxLength)"
+          maxlength="2"
+          name="minutes"
+          id="min"
+          class="timer-input"
+        />
+        <p class="colons">:</p>
+        <input
+          type="number"
+          oninput="this.value=this.value.slice(0,this.maxLength)"
+          maxlength="2"
+          name="seconds"
+          id="sec"
+          class="timer-input"
+        />
+      </div>
+      <div class="buttons">
+        <button id="start" class="button button-start">Start</button>
+        <button id="stop" class="button button-stop">Stop</button>
+        <button id="reset" class="button button-reset">Reset</button>
+      </div>
+      <h1 class="title">Counter Timer</h1>
+
+      <div class="timer-labels">
+        <p class="timer-label">Hours</p>
+        <p class="timer-label">Minutes</p>
+        <p class="timer-label">Seconds</p>
+      </div>
+      <div class="timer-inputs">
+        <p id="counter-hour" class="counter-text">00</p>
+        <p class="colons">:</p>
+        <p id="counter-min" class="counter-text">00</p>
+        <p class="colons">:</p>
+        <p id="counter-sec" class="counter-text">00</p>
+      </div>
+      <div class="buttons">
+        <button id="start-counter" class="button button-start">Start</button>
+        <button id="stop-counter" class="button button-stop">Stop</button>
+        <button id="reset-counter" class="button button-reset">Reset</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
